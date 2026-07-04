@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMM Boost Demo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#0b0b0b;color:#fff}
+header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:16px 5%;background:#111;border-bottom:1px solid #222}
+.logo{font-size:28px;font-weight:700;color:#39ff88}
+nav a{color:#ddd;text-decoration:none;margin:0 10px}
+.btn{padding:11px 18px;border-radius:10px;border:none;background:#39ff88;color:#000;font-weight:bold;cursor:pointer}
+.hero{text-align:center;padding:80px 5%;background:radial-gradient(circle,#12351e,#0b0b0b 65%)}
+.hero h1{font-size:52px}.hero span{color:#39ff88}
+.wrap{max-width:1200px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:50px 5%}
+.card{background:#151515;border:1px solid #2b2b2b;border-radius:16px;padding:22px}
+.card h3{color:#39ff88;margin-bottom:10px}
+section h2{text-align:center;padding-top:20px}
+footer{text-align:center;padding:40px;color:#999;border-top:1px solid #222}
+dialog{border:none;border-radius:14px;padding:20px;width:min(90%,380px)}
+dialog input{width:100%;padding:10px;margin:8px 0}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SMM BOOST</div>
+<nav>
+<a href="#services">Услуги</a>
+<a href="#prices">Цены</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div>
+<button class="btn" onclick="login.showModal()">Войти</button>
+<button class="btn" onclick="register.showModal()">Регистрация</button>
+</div>
+</header>
+
+<section class="hero">
+<div class="wrap">
+<h1>Продвигай аккаунты <span>быстро</span></h1>
+<p style="margin:20px auto;max-width:700px;color:#bbb">Демонстрационный макет сайта для ролика. Все кнопки работают и показывают интерфейс.</p>
+<button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Начать</button>
+</div>
+</section>
+
+<h2 id="services">Популярные услуги</h2>
+<div class="grid">
+<div class="card"><h3>Instagram</h3><p>Подписчики и лайки</p><br><button class="btn" onclick="order('Instagram')">Заказать</button></div>
+<div class="card"><h3>YouTube</h3><p>Просмотры</p><br><button class="btn" onclick="order('YouTube')">Заказать</button></div>
+<div class="card"><h3>TikTok</h3><p>Лайки</p><br><button class="btn" onclick="order('TikTok')">Заказать</button></div>
+<div class="card"><h3>Telegram</h3><p>Подписчики</p><br><button class="btn" onclick="order('Telegram')">Заказать</button></div>
+</div>
+
+<h2 id="prices">Тарифы</h2>
+<div class="grid">
+<div class="card"><h3>Старт</h3><p>Для небольших проектов</p></div>
+<div class="card"><h3>Pro</h3><p>Для активного продвижения</p></div>
+<div class="card"><h3>Business</h3><p>Для агентств</p></div>
+</div>
+
+<h2 id="faq">FAQ</h2>
+<div class="grid">
+<div class="card"><h3>Как оформить заказ?</h3><p>Нажмите «Заказать» и заполните форму.</p></div>
+<div class="card"><h3>Есть поддержка?</h3><p>Да, 24/7 (демонстрационный текст).</p></div>
+</div>
+
+<footer>© 2026 SMM Boost • Демонстрационный шаблон</footer>
+
+<dialog id="register">
+<h2>Регистрация</h2>
+<input placeholder="Email">
+<input type="password" placeholder="Пароль">
+<button class="btn" onclick="alert('Демо: регистрация выполнена');register.close()">Создать аккаунт</button>
+</dialog>
+
+<dialog id="login">
+<h2>Вход</h2>
+<input placeholder="Email">
+<input type="password" placeholder="Пароль">
+<button class="btn" onclick="alert('Демо: вход выполнен');login.close()">Войти</button>
+</dialog>
+
+<script>
+function order(service){
+ alert("Демо-заказ для: "+service);
+}
+</script>
+</body>
+</html>
